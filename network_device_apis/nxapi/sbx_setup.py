@@ -23,7 +23,7 @@ requests.packages.urllib3.disable_warnings(
 )
 
 # Switch Connection Info
-url = "https://sbx-nxos-mgmt.cisco.com/ins"
+url = "https://sandbox-nxos-1.cisco.com"
 switchuser = "admin"
 switchpassword = "Admin_1234!"
 myheaders = {'content-type': 'application/json'}
