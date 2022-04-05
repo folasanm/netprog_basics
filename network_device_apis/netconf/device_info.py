@@ -14,6 +14,14 @@ ios_xe1 = {
              "password": "C1sco12345"
            }
 
+# DevNet Always-On IOS XE on CSR Recommended Code Sandbox Device
+# https://devnetsandbox.cisco.com/RM/Diagram/Index/27d9747a-db48-4565-8d44-df318fce37ad?diagramType=Topology
+csr1 = {
+             "address": "172.18.124.134",
+             "port": 8830,
+             "username": "femi",
+             "password": "LOVEme01"
+           }
 # DevNet Always-On IOS XE on CSR Latest Code Sandbox Device
 # https://devnetsandbox.cisco.com/RM/Diagram/Index/38ded1f0-16ce-43f2-8df5-43a40ebf752e?diagramType=Topology
 ios_xe_latest = {
