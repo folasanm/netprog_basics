@@ -1,12 +1,7 @@
-<filter>
-  <interfaces xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">
-    <interface>
-      <name>GigabitEthernet3</name>
-    </interface>
-  </interfaces>
-  <interfaces-state xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">
-    <interface>
-      <name>GigabitEthernet3</name>
-    </interface>
-  </interfaces-state>
-</filter>
+<native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+  <interface>
+    <GigabitEthernet>
+      <name>3</name>
+    </GigabitEthernet>
+  </interface>
+</native>
