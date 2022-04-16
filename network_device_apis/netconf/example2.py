@@ -11,7 +11,6 @@ from ncclient import manager
 import xmltodict
 import xml.dom.minidom
 
-
 # NETCONF filter to use
 netconf_filter = open("filter-ietf-interfaces.xml").read()
 
@@ -23,12 +22,12 @@ with manager.connect(host =csr1 ["address"],
 
 
     # Get Configuration and State Info for Interface
-    netconf_reply = m.get(('subtree',  netconf_filter))
+    netconf_reply = m.get(netconf_filter)
 
     print(netconf_reply)
     # Process the XML and store in useful dictionaries
-    #intf_details = xmltodict.parse(netconf_reply.xml)["rpc-reply"]["data"]
-    intf_details = xml.dom.minidom.parseString(netconf_reply)["rpc-reply"]["data"]
+    intf_details = xmltodict.parse(netconf_reply.xml)["rpc-reply"]["data"]
+    #intf_details = xml.dom.minidom.parseString(netconf_reply)["rpc-reply"]["data"]
     intf_config = intf_details["interfaces"]["interface"]
     intf_info = intf_details["interfaces-state"]["interface"]
 

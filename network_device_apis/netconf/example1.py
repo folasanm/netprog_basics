@@ -5,14 +5,14 @@ Illustrate the following concepts:
 - Saying <hello> and review capabilities
 """
 
-from device_info import ios_xe1 
+from device_info import csr1 
 from ncclient import manager
 
 if __name__ == '__main__':
-    with manager.connect(host = ios_xe1 ["address"], 
-                         port = ios_xe1 ["port"],
-                         username = ios_xe1 ["username"],
-                         password = ios_xe1 ["password"],
+    with manager.connect(host = csr1 ["address"], 
+                         port = csr1 ["port"],
+                         username = csr1 ["username"],
+                         password = csr1 ["password"],
                          hostkey_verify=False) as m:
 
         print("Here are the NETCONF Capabilities")
