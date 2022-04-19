@@ -9,7 +9,7 @@ Illustrate the following concepts:
 from device_info import csr1
 from ncclient import manager
 import xmltodict
-import xml.dom.minidom
+# import xml.dom.minidom
 
 # NETCONF filter to use
 netconf_filter = open("filter-ietf-interfaces.xml").read()
