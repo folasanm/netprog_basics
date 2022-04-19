@@ -18,7 +18,7 @@ ios_xe1 = {
 # https://devnetsandbox.cisco.com/RM/Diagram/Index/27d9747a-db48-4565-8d44-df318fce37ad?diagramType=Topology
 csr1 = {
              "address": "172.18.124.134",
-             "port": 9830,
+             "port": 8830,
              "username": "femi",
              "password": "LOVEme01"
            }

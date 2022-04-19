@@ -22,7 +22,7 @@ with manager.connect(host =csr1 ["address"],
 
 
     # Get Configuration and State Info for Interface
-    netconf_reply = m.get(netconf_filter)
+    netconf_reply = m.get_config('running')
 
     print(netconf_reply)
     # Process the XML and store in useful dictionaries
