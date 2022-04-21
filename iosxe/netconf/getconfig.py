@@ -32,7 +32,6 @@ if __name__ == '__main__':
         intf_config = intf_details["interfaces"]["interface"]
         intf_info = intf_details["interfaces-state"]["interface"]
 
-
         for intf in intf_config:
             print("")
             print("Interface Details:")
@@ -48,5 +47,3 @@ if __name__ == '__main__':
                     print("  MAC Address: {}".format(state["phys-address"]))
                     print("  Packets Input: {}".format(state["statistics"]["in-unicast-pkts"]))
                     print("  Packets Output: {}".format(state["statistics"]["out-unicast-pkts"]))
-
-       
