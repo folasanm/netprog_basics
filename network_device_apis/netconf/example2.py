@@ -32,19 +32,21 @@ if __name__ == '__main__':
         intf_config = intf_details["interfaces"]["interface"]
         intf_info = intf_details["interfaces-state"]["interface"]
 
-        #pprint(intf_details)
-        #pprint(intf_config)
-        #pprint(intf_info)
 
-        for interface in intf_config:
+        for intf in intf_config:
             print("")
             print("Interface Details:")
-            print("  Name: {}".format(interface["name"]))
-            print("  Link Enabled: {}".format(interface["enabled"]))
+            print("  Name: {}".format(intf["name"]))
+            print("  Link Enabled: {}".format(intf["enabled"]))
+            try:
+                print("  IP Address: {} {}".format(intf["ipv4"]["address"]['ip'], intf['ipv4']['address']['netmask']))
+            except:
+                print("  NO IP Address")
+            for state in intf_info:
+                if state['name'] == intf['name']:
+                    #print("  Description: {}".format(intf_config["description"]))
+                    print("  MAC Address: {}".format(state["phys-address"]))
+                    print("  Packets Input: {}".format(state["statistics"]["in-unicast-pkts"]))
+                    print("  Packets Output: {}".format(state["statistics"]["out-unicast-pkts"]))
 
-        for state in intf_info:
-            # print("  Description: {}".format(intf_config["description"]))
-            print("  MAC Address: {}".format(state["phys-address"]))
-            print("  Packets Input: {}".format(state["statistics"]["in-unicast-pkts"]))
-            print("  Packets Output: {}".format(state["statistics"]["out-unicast-pkts"]))
-    
+       
